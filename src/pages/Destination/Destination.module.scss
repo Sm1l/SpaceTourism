@@ -1,0 +1,85 @@
+.destination {
+  width: 100%;
+  min-height: 100dvh;
+  padding: 200px 110px 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: url("../../assets/images/destination/background-destination-desktop.jpg") no-repeat center / cover;
+  gap: 50px;
+}
+
+.title {
+  color: var(--colorWhite) !important;
+  align-self: flex-start;
+}
+.number {
+  padding-right: 20px;
+  opacity: 0.5;
+}
+
+.destinationContainer {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  & img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.contentContainer {
+  display: grid;
+  max-width: 444px;
+  grid-template-rows: repeat(4, auto);
+  gap: 40px;
+}
+
+.text {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--colorGrey);
+  }
+}
+
+.info {
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  text-transform: uppercase;
+}
+
+.infoText {
+  font-size: 0.8rem;
+}
+.infoNumber {
+  font-family: Bellefair !important;
+  color: var(--colorWhite);
+  font-size: 28px;
+}
+
+.imageContainer {
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+.technologyNav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 2.8rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Bellefair;
+  color: var(--colorWhite);
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--colorWhite);
+  border-radius: 50%;
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.activeLink {
+  opacity: 1;
+  background-color: var(--colorWhite);
+  color: var(--colorBlack);
+}

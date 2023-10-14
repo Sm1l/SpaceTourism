@@ -1,0 +1,15 @@
+.destinationNav {
+  display: flex;
+  gap: 20px;
+  color: var(--colorLightGrey);
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+.activeLink {
+  color: var(--colorWhite);
+  text-decoration: underline;
+}
+
+.pendingLink {
+  color: var(--colorLightGrey);
+}
