@@ -17,10 +17,10 @@ const BurgerContainer: React.FC<BurgerContainerProps> = () => {
         </NavLink>
         <NavLink className={styles.link} to="destination">
           <span className={styles.span}>02</span>
-          Crew
+          Destination
         </NavLink>
         <NavLink className={styles.link} to="crew">
-          <span className={styles.span}>03</span>Destination
+          <span className={styles.span}>03</span>Crew
         </NavLink>
         <NavLink className={styles.link} to="technology">
           <span className={styles.span}>04</span>Technology
