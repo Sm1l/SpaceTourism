@@ -1,7 +1,7 @@
 .destination {
   width: 100%;
   min-height: 100dvh;
-  padding: 200px 110px 110px;
+  padding: 180px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +23,11 @@
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
 }
 
 .imageContainer {
@@ -41,6 +44,7 @@
   display: grid;
   max-width: 444px;
   grid-template-rows: repeat(4, auto);
+  align-items: center;
   gap: 40px;
 }
 
@@ -61,10 +65,9 @@
 .info {
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: flex-start;
+  gap: 10px;
   text-transform: uppercase;
 }
 
@@ -81,5 +84,30 @@
   img {
     max-width: 100%;
     max-height: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  .info {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 960px) {
+  .destination {
+    padding: 200px 110px 110px;
+  }
+  .destinationContainer {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+  .info {
+    justify-content: flex-start;
   }
 }

@@ -1,0 +1,21 @@
+.burgerContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.link {
+  position: relative;
+  color: var(--colorLightGrey);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+.span {
+  padding-right: 10px;
+  color: var(--colorWhite);
+}

@@ -1,9 +1,7 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
 
 import styles from "./DestinationNav.module.scss";
 import { CustomLink } from "../CustomLink";
-// import { CustomLink } from "../CustomLink";
 
 interface DestinationNavProps {}
 

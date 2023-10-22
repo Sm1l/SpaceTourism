@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Navigate, useParams } from "react-router";
 import data from "../../data/data.json";
-import { linkConversion } from "../../Helpers/linkConversion";
+// import { linkConversion } from "../../Helpers/linkConversion";
 
 import styles from "./Destination.module.scss";
 import { DestinationNav } from "../../components/DestinationNav";
 
-// type TPlanet = "moon" | "mars" | "europa" | "titan";
+//*for GitHub
+import img1 from "../../assets/images/destination/image-moon.webp";
+import img2 from "../../assets/images/destination/image-mars.webp";
+import img3 from "../../assets/images/destination/image-europa.webp";
+import img4 from "../../assets/images/destination/image-titan.webp";
+//*end
 
 interface DestinationProps {}
 
@@ -18,7 +23,25 @@ const Destination: React.FC<DestinationProps> = () => {
   const filteredPlanet = data.destinations.filter((el) => el.name.toLowerCase() === planet)[0];
 
   useEffect(() => {
-    planet && setPlanetImage(linkConversion(filteredPlanet.images.webp));
+    // planet && setPlanetImage(linkConversion(filteredPlanet.images.webp));
+    switch (planet) {
+      //*for GitHub
+      case "moon":
+        setPlanetImage(img1);
+        break;
+      case "mars":
+        setPlanetImage(img2);
+        break;
+      case "europa":
+        setPlanetImage(img3);
+        break;
+      case "titan":
+        setPlanetImage(img4);
+        break;
+      default:
+        break;
+      //*end
+    }
   }, [planet]);
 
   if (!planet) {

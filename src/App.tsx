@@ -2,7 +2,13 @@ import React from "react";
 
 import styles from "./App.module.scss";
 
-import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from "react-router-dom";
+import {
+  // createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Route,
+  createHashRouter,
+} from "react-router-dom";
 
 import { Home } from "./pages/Home";
 import { Destination } from "./pages/Destination";
@@ -11,7 +17,9 @@ import { Technology } from "./pages/Technology";
 import { Layout } from "./components/Layout";
 import { AppContainer } from "./components/AppContainer";
 
-const router = createBrowserRouter(
+//* #hashRouter for GitHub only
+// const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />

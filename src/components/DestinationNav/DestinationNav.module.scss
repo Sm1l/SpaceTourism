@@ -1,5 +1,7 @@
 .destinationNav {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
   color: var(--colorLightGrey);
   letter-spacing: 2.7px;
@@ -12,4 +14,9 @@
 
 .pendingLink {
   color: var(--colorLightGrey);
+}
+@media (min-width: 960px) {
+  .destinationNav {
+    justify-content: flex-start;
+  }
 }

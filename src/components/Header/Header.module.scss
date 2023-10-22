@@ -1,23 +1,26 @@
 .header {
   position: absolute;
   width: 100%;
-  top: 40px;
+  top: 0;
   right: 0;
   display: grid;
   align-items: center;
-  grid-template-columns: 50px auto minmax(500px, 720px);
+  grid-template-columns: 50px 1fr auto;
   gap: 20px;
-  padding-left: 40px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 .navigation {
+  // position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 50px;
-  padding: 40px 110px 40px 0px;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(40.774227142333984px);
+  padding: 20px 20px 20px 0px;
+  min-width: 60px;
+  // background: rgba(255, 255, 255, 0.04);
+  // backdrop-filter: blur(40.774227142333984px);
 }
 
 .star {
@@ -38,7 +41,7 @@
     position: absolute;
     top: 50%;
     left: 0;
-    width: calc(100% + 40px);
+    width: 100%;
     height: 1px;
     background-color: var(--colorWhite);
     opacity: 0.3;
@@ -47,4 +50,45 @@
 }
 .activeLink {
   color: red;
+}
+
+@media (min-width: 700px) {
+  .header {
+    grid-template-columns: 50px auto minmax(400px, 720px);
+  }
+  .line {
+    &::after {
+      width: calc(100% + 40px);
+    }
+  }
+  .navigation {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+  }
+}
+
+@media (min-width: 960px) {
+  .header {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    right: 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 50px auto minmax(500px, 720px);
+    gap: 20px;
+    padding-left: 40px;
+    padding-top: 0;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+    padding: 40px 110px 40px 0px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+  }
 }

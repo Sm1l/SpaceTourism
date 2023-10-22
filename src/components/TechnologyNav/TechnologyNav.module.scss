@@ -1,29 +1,46 @@
 .technologyNav {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  font-size: 2.8rem;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
 }
 
 .link {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-family: Bellefair;
   color: var(--colorWhite);
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   border: 1px solid var(--colorWhite);
   border-radius: 50%;
   opacity: 0.2;
-
-  &:hover {
-    opacity: 0.5;
-  }
 }
 
 .activeLink {
   opacity: 1;
   background-color: var(--colorWhite);
   color: var(--colorBlack);
+}
+
+@media (min-width: 960px) {
+  .technologyNav {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: flex-start;
+    font-size: 2.8rem;
+  }
+
+  .link {
+    width: 80px;
+    height: 80px;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }

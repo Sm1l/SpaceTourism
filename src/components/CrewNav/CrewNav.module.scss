@@ -1,23 +1,33 @@
 .crewNav {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
 .link {
   display: flex;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border: none;
   border-radius: 50%;
   background-color: var(--colorWhite);
   opacity: 0.2;
-
-  &:hover {
-    opacity: 0.5;
-  }
 }
 
 .activeLink {
   opacity: 1;
+}
+
+@media (min-width: 960px) {
+  .crewNav {
+    justify-content: flex-start;
+  }
+  .link {
+    width: 20px;
+    height: 20px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
